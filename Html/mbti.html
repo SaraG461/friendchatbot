@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+    <title>MBTI Personality Test</title>
+    <link rel="stylesheet" href="Css/mbti.css">
+</head>
+<body>
+    <h1 class="logo">Friend Chatbot</h1>
+    <div class="container">
+        <h2>MBTI Personality Test</h2>
+        <form id="mbti-test">
+            <div class="question">
+                <p>1. At a party do you</p>
+                <h3>a. Interacting with many, including strangers</h3>
+                <h3>b. Interacting with a few, known to you</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q1_1" name="q1" value="1"><label for="q1_1">A</label>
+                    <input type="radio" id="q1_2" name="q1" value="2"><label for="q1_2">B</label>
+                    
+                </div>
+            </div>
+            <div class="question">
+                <p>2. Are you more</p>
+                <h3>a. Realistic than speculative</h3>
+                <h3>b. Speculative than realistic</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q2_1" name="q2" value="1"><label for="q2_1">A</label>
+                    <input type="radio" id="q2_2" name="q2" value="2"><label for="q2_2">B</label>
+                    
+                </div>
+            </div>
+            <div class="question">
+                <p>3. Is it worse to</p>
+                <h3>a. Have your “head in the clouds”</h3>
+                <h3>b. Be “in a rut”</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q3_1" name="q3" value="1"><label for="q3_1">A</label>
+                    <input type="radio" id="q3_2" name="q3" value="2"><label for="q3_2">B</label>
+                    
+                </div>
+            </div>
+            <div class="question">
+                <p>4. Are you more impressed by</p>
+                <h3>a. Principles</h3>
+                <h3>b. Emotions</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q4_1" name="q4" value="1"><label for="q4_1">A</label>
+                    <input type="radio" id="q4_2" name="q4" value="2"><label for="q4_2">B</label>
+                    
+                </div>
+            </div>
+            <div class="question">
+                <p>5. Are more drawn toward the</p>
+                <h3>a. Convincing</h3>
+                <h3>b. Touching</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q5_1" name="q5" value="1"><label for="q5_1">A</label>
+                    <input type="radio" id="q5_2" name="q5" value="2"><label for="q5_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. Do you prefer to work</p>
+                <h3>a. To deadlines</h3>
+                <h3>b. Just “whenever”</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q6_1" name="q6" value="1"><label for="q6_1">A</label>
+                    <input type="radio" id="q6_2" name="q6" value="2"><label for="q6_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. Do you tend to choose</p>
+                <h3>a. Rather carefully</h3>
+                <h3>b. Somewhat impulsively</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q7_1" name="q7" value="1"><label for="q7_1">A</label>
+                    <input type="radio" id="q7_2" name="q7" value="2"><label for="q7_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. At parties do you</p>
+                <h3>a. Stay late, with increasing energy</h3>
+                <h3>b. Leave early with decreased energy</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q8_1" name="q8" value="1"><label for="q8_1">A</label>
+                    <input type="radio" id="q8_2" name="q8" value="2"><label for="q8_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. Are you more attracted to</p>
+                <h3>a. Sensible people</h3>
+                <h3>b. Imaginative people</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q9_1" name="q9" value="1"><label for="q9_1">A</label>
+                    <input type="radio" id="q9_2" name="q9" value="2"><label for="q9_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. Are you more interested in</p>
+                <h3>a. What is actual</h3>
+                <h3>b. What is possible</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q10_1" name="q10" value="1"><label for="q10_1">A</label>
+                    <input type="radio" id="q10_2" name="q10" value="2"><label for="q10_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>11. In judging others are you more swayed by</p>
+                <h3>a. Laws than circumstances</h3>
+                <h3>b. Circumstances than laws</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q11_1" name="q11" value="1"><label for="q11_1">A</label>
+                    <input type="radio" id="q11_2" name="q11" value="2"><label for="q11_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>12. In approaching others is your inclination to be</p>
+                <h3>a. Objective</h3>
+                <h3>b. Personal</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q12_1" name="q12" value="1"><label for="q12_1">A</label>
+                    <input type="radio" id="q12_2" name="q12" value="2"><label for="q12_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>13. Are you more</p>
+                <h3>a. Punctual</h3>
+                <h3>b. Leisurely</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q13_1" name="q13" value="1"><label for="q13_1">A</label>
+                    <input type="radio" id="q13_2" name="q13" value="2"><label for="q13_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>14. Does it bother you more having things</p>
+                <h3>a. Incomplete</h3>
+                <h3>b. Completed</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q14_1" name="q14" value="1"><label for="q14_1">A</label>
+                    <input type="radio" id="q14_2" name="q14" value="2"><label for="q14_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>15. In your social groups do you</p>
+                <h3>a. Keep abreast of other’s happenings</h3>
+                <h3>b. Get behind on the news</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q15_1" name="q15" value="1"><label for="q15_1">A</label>
+                    <input type="radio" id="q15_2" name="q15" value="2"><label for="q15_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>16. In doing ordinary things are you more likely to:</p>
+                <h3>a. Do it the usual way </h3>
+                <h3>b. Do it your own way</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q16_1" name="q16" value="1"><label for="q16_1">A</label>
+                    <input type="radio" id="q16_2" name="q16" value="2"><label for="q16_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>17. Writers should</p>
+                <h3>a. “Say what they mean and mean what they say”</h3>
+                <h3>b. Express things more by use of analogy</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q17_1" name="q17" value="1"><label for="q17_1">A</label>
+                    <input type="radio" id="q17_2" name="q17" value="2"><label for="q17_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class = "question">
+                <p>18. Which appeals to you more</p>
+                <h3>a. Consistency of thought</h3>
+                <h3>b. Harmonious human relationships</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q18_1" name="q18" value="1"><label for="q18_1">A</label>
+                    <input type="radio" id="q18_2" name="q18" value="2"><label for="q18_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>19. Are you more comfortable in making</p>
+                <h3>a. Logical judgments</h3>
+                <h3>b. Value judgments</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q19_1" name="q19" value="1"><label for="q19_1">A</label>
+                    <input type="radio" id="q19_2" name="q19" value="2"><label for="q19_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>20. Do you want things</p>
+                <h3>a. Settled and decided</h3>
+                <h3>b. Unsettled and undecided</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q20_1" name="q20" value="1"><label for="q20_1">A</label>
+                    <input type="radio" id="q20_2" name="q20" value="2"><label for="q20_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>21. Would you say you are more</p>
+                <h3>a. Serious and determined</h3>
+                <h3>b. Easy-going</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q21_1" name="q21" value="1"><label for="q21_1">A</label>
+                    <input type="radio" id="q21_2" name="q21" value="2"><label for="q21_2">B</label>
+                    
+                </div>
+            </div>
+
+            
+
+            <div class="question">
+                <p>22. In phoning do you</p>
+                <h3>a. Rarely question that it will all be said</h3>
+                <h3>b. Rehearse what you’ll say</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q22_1" name="q22" value="1"><label for="q22_1">A</label>
+                    <input type="radio" id="q22_2" name="q22" value="2"><label for="q22_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>23. Facts: </p>
+                <h3>a. Speak for themselves</h3>
+                <h3>b. Illustrate principles</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q23_1" name="q23" value="1"><label for="q23_1">A</label>
+                    <input type="radio" id="q23_2" name="q23" value="2"><label for="q23_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>24. Do you find visionaries</p>
+                <h3>a. somewhat annoying</h3>
+                <h3>b. rather fascinating</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q24_1" name="q24" value="1"><label for="q24_1">A</label>
+                    <input type="radio" id="q24_2" name="q24" value="2"><label for="q24_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>25. Are you more often</p>
+                <h3>a. a cool-headed person</h3>
+                <h3>b. a warm-hearted person</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q25_1" name="q25" value="1"><label for="q25_1">A</label>
+                    <input type="radio" id="q25_2" name="q25" value="2"><label for="q25_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>26. Is it worse to be</p>
+                <h3>a. unjust</h3>
+                <h3>b. merciless</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q26_1" name="q26" value="1"><label for="q26_1">A</label>
+                    <input type="radio" id="q26_2" name="q26" value="2"><label for="q26_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>27. Should one usually let events occur</p>
+                <h3>a. by careful selection and choice</h3>
+                <h3>b. randomly and by chance</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q27_1" name="q27" value="1"><label for="q27_1">A</label>
+                    <input type="radio" id="q27_2" name="q27" value="2"><label for="q27_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>28. Do you feel better about</p>
+                <h3>a. having purchased</h3>
+                <h3>b. having the option to buy</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q28_1" name="q28" value="1"><label for="q28_1">A</label>
+                    <input type="radio" id="q28_2" name="q28" value="2"><label for="q28_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>29. In company do you</p>
+                <h3>a. initiate conversation</h3>
+                <h3>b. wait to be approached</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q29_1" name="q29" value="1"><label for="q29_1">A</label>
+                    <input type="radio" id="q29_2" name="q29" value="2"><label for="q29_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class="question">
+                <p>30. Common sense is</p>
+                <h3>a. rarely questionable</h3>
+                <h3>b. frequently questionable</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q30_1" name="q30" value="1"><label for="q30_1">A</label>
+                    <input type="radio" id="q30_2" name="q30" value="2"><label for="q30_2">B</label>
+                    
+                </div>
+            </div>
+
+            <div class = "question">
+                <p>31. Children often do not</p>
+                <h3>a. make themselves useful enough</h3>
+                <h3>b. exercise their fantasy enough</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q31_1" name="q31" value="1"><label for="q31_1">A</label>
+                    <input type="radio" id="q31_2" name="q31" value="2"><label for="q31_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>32. In making decisions do you feel more comfortable with</p>
+                <h3>a. standards</h3>
+                <h3>b. feelings</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q32_1" name="q32" value="1"><label for="q32_1">A</label>
+                    <input type="radio" id="q32_2" name="q32" value="2"><label for="q32_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>33. Are you more</p>
+                <h3>a. firm than gentle</h3>
+                <h3>b. gentle than firm</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q33_1" name="q33" value="1"><label for="q33_1">A</label>
+                    <input type="radio" id="q33_2" name="q33" value="2"><label for="q33_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>34. Which is more admirable:</p>
+                <h3>a. the ability to organize and be methodical</h3>
+                <h3>b. the ability to adapt and make do</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q34_1" name="q34" value="1"><label for="q34_1">A</label>
+                    <input type="radio" id="q34_2" name="q34" value="2"><label for="q34_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>35. Do you put more value on</p>
+                <h3>a. infinite</h3>
+                <h3>b. open-minded</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q35_1" name="q35" value="1"><label for="q35_1">A</label>
+                    <input type="radio" id="q35_2" name="q35" value="2"><label for="q35_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>36. Does new and non-routine interaction with others</p>
+                <h3>a. stimulate and energize you</h3>
+                <h3>b. tax your reserves</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q36_1" name="q36" value="1"><label for="q36_1">A</label>
+                    <input type="radio" id="q36_2" name="q36" value="2"><label for="q36_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>37. Are you more frequently</p>
+                <h3>a. a practical sort of person</h3>
+                <h3>b. a fanciful sort of person</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q37_1" name="q37" value="1"><label for="q37_1">A</label>
+                    <input type="radio" id="q37_2" name="q37" value="2"><label for="q37_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>38. Are you more likely to</p>
+                <h3>a. see how others are useful</h3>
+                <h3>b. see how others see</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q38_1" name="q38" value="1"><label for="q38_1">A</label>
+                    <input type="radio" id="q38_2" name="q38" value="2"><label for="q38_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>39. Which is more satisfying</p>
+                <h3>a. to discuss an issue thoroughly</h3>
+                <h3>b. to arrive at agreement on an issue</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q39_1" name="q39" value="1"><label for="q39_1">A</label>
+                    <input type="radio" id="q39_2" name="q39" value="2"><label for="q39_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>40. Which rules you more:</p>
+                <h3>a. your head</h3>
+                <h3>b. your heart</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q40_1" name="q40" value="1"><label for="q40_1">A</label>
+                    <input type="radio" id="q40_2" name="q40" value="2"><label for="q40_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>41. Are you more comfortable with work that is</p>
+                <h3>a. contracted</h3>
+                <h3>b. done on a casual basis</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q41_1" name="q41" value="1"><label for="q41_1">A</label>
+                    <input type="radio" id="q41_2" name="q41" value="2"><label for="q41_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>42. Do you tend to look for</p>
+                <h3>a. the orderly</h3>
+                <h3>b. whatever turns up</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q42_1" name="q42" value="1"><label for="q42_1">A</label>
+                    <input type="radio" id="q42_2" name="q42" value="2"><label for="q42_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>43. Do you prefer: </p>
+                <h3>a. many friends with brief contact </h3>
+                <h3>b. a few friends with more lengthy contact</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q43_1" name="q43" value="1"><label for="q43_1">A</label>
+                    <input type="radio" id="q43_2" name="q43" value="2"><label for="q43_2">B</label>
+                </div>
+            </div>
+
+            <div class = "question">
+                <p>44. Do you go more by</p>
+                <h3>a. facts</h3>
+                <h3>b. principles</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q44_1" name="q44" value="1"><label for="q44_1">A</label>
+                    <input type="radio" id="q44_2" name="q44" value="2"><label for="q44_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>45. Are you more interested in</p>
+                <h3>a. production and distribution</h3>
+                <h3>b. design and research</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q45_1" name="q45" value="1"><label for="q45_1">A</label>
+                    <input type="radio" id="q45_2" name="q45" value="2"><label for="q45_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>46. Which is more of a compliment:</p>
+                <h3>a. “There is a very logical person.”</h3>
+                <h3>b. “There is a very sentimental person.”</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q46_1" name="q46" value="1"><label for="q46_1">A</label>
+                    <input type="radio" id="q46_2" name="q46" value="2"><label for="q46_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>47. Do you value in yourself more that you are: </p>
+                <h3>a. unwavering</h3>
+                <h3>b. devoted</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q47_1" name="q47" value="1"><label for="q47_1">A</label>
+                    <input type="radio" id="q47_2" name="q47" value="2"><label for="q47_2">B</label>
+                </div>
+            </div>
+
+            <div class = "question">
+                <p>48. Do you more often prefer the</p>
+                <h3>a. final and unalterable statement</h3>
+                <h3>b. tentative and preliminary statement</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q48_1" name="q48" value="1"><label for="q48_1">A</label>
+                    <input type="radio" id="q48_2" name="q48" value="2"><label for="q48_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>49. Are you more comfortable</p>
+                <h3>a. after a decision</h3>
+                <h3>b. before a decision</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q49_1" name="q49" value="1"><label for="q49_1">A</label>
+                    <input type="radio" id="q49_2" name="q49" value="2"><label for="q49_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>50. Do you</p>
+                <h3>a. speak easily and at length with strangers</h3>
+                <h3>b. find little to say to strangers</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q50_1" name="q50" value="1"><label for="q50_1">A</label>
+                    <input type="radio" id="q50_2" name="q50" value="2"><label for="q50_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>51. Are you more likely to trust your</p>
+                <h3>a. experiences</h3>
+                <h3>b. hunches</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q51_1" name="q51" value="1"><label for="q51_1">A</label>
+                    <input type="radio" id="q51_2" name="q51" value="2"><label for="q51_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>52. Do you feel</p>
+                <h3>a. more practical than ingenious</h3>
+                <h3>b. more ingenious than practical</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q52_1" name="q52" value="1"><label for="q52_1">A</label>
+                    <input type="radio" id="q52_2" name="q52" value="2"><label for="q52_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>53. Which person is more to be complimented one of: </p>
+                <h3>a. clear reason</h3>
+                <h3>b. strong feeling</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q53_1" name="q53" value="1"><label for="q53_1">A</label>
+                    <input type="radio" id="q53_2" name="q53" value="2"><label for="q53_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>54. Are you inclined more to be</p>
+                <h3>a. fair-minded</h3>
+                <h3>b. sympathetic</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q54_1" name="q54" value="1"><label for="q54_1">A</label>
+                    <input type="radio" id="q54_2" name="q54" value="2"><label for="q54_2">B</label>
+                </div>
+            </div>
+
+
+            <div class="question">
+                <p>55. Is it preferable mostly to</p>
+                <h3>a. make sure things are arranged</h3>
+                <h3>b. just let things happen</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q55_1" name="q55" value="1"><label for="q55_1">A</label>
+                    <input type="radio" id="q55_2" name="q55" value="2"><label for="q55_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>56. In relationships should most things be</p>
+                <h3>a. re-negotiable</h3>
+                <h3>b. random and circumstantial</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q56_1" name="q56" value="1"><label for="q56_1">A</label>
+                    <input type="radio" id="q56_2" name="q56" value="2"><label for="q56_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>57. When the phone rings do you</p>
+                <h3>a. hasten to get to it first</h3>
+                <h3>b. hope someone else will answer</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q57_1" name="q57" value="1"><label for="q57_1">A</label>
+                    <input type="radio" id="q57_2" name="q57" value="2"><label for="q57_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>58. Do you prize more in yourself:</p>
+                <h3>a. a strong sense of reality</h3>
+                <h3>b. a vivid imagination</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q58_1" name="q58" value="1"><label for="q58_1">A</label>
+                    <input type="radio" id="q58_2" name="q58" value="2"><label for="q58_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>59. Are you drawn more to</p>
+                <h3>a. fundamentals</h3>
+                <h3>b. overtones</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q59_1" name="q59" value="1"><label for="q59_1">A</label>
+                    <input type="radio" id="q59_2" name="q59" value="2"><label for="q59_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>60. Which seems the greater error:</p>
+                <h3>a. to be too passionate</h3>
+                <h3>b. to be too objective</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q60_1" name="q60" value="1"><label for="q60_1">A</label>
+                    <input type="radio" id="q60_2" name="q60" value="2"><label for="q60_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>61. Do you see yourself as basically</p>
+                <h3>a. hard-headed</h3>
+                <h3>b. soft-hearted</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q61_1" name="q61" value="1"><label for="q61_1">A</label>
+                    <input type="radio" id="q61_2" name="q61" value="2"><label for="q61_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>62. Which situation appeals to you more:</p>
+                <h3>a. the structured and scheduled</h3>
+                <h3>b. the unstructured and unscheduled</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q62_1" name="q62" value="1"><label for="q62_1">A</label>
+                    <input type="radio" id="q62_2" name="q62" value="2"><label for="q62_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>63. Are you a person that is more</p>
+                <h3>a. routinized than whimsical</h3>
+                <h3>b. whimsical than routinized</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q63_1" name="q63" value="1"><label for="q63_1">A</label>
+                    <input type="radio" id="q63_2" name="q63" value="2"><label for="q63_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>64. Are you more inclined to be</p>
+                <h3>a. easy to approach</h3>
+                <h3>b. somewhat reserved</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q64_1" name="q64" value="1"><label for="q64_1">A</label>
+                    <input type="radio" id="q64_2" name="q64" value="2"><label for="q64_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>65. In writings do you prefer</p>
+                <h3>a. the more literal</h3>
+                <h3>b. the more figurative</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q65_1" name="q65" value="1"><label for="q65_1">A</label>
+                    <input type="radio" id="q65_2" name="q65" value="2"><label for="q65_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>66. Is it harder for you to</p>
+                <h3>a. identify with others</h3>
+                <h3>b. utilize others</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q66_1" name="q66" value="1"><label for="q66_1">A</label>
+                    <input type="radio" id="q66_2" name="q66" value="2"><label for="q66_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>67. Which do you wish more for yourself:</p>
+                <h3>a. clarity of reason</h3>
+                <h3>b. strength of compassion</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q67_1" name="q67" value="1"><label for="q67_1">A</label>
+                    <input type="radio" id="q67_2" name="q67" value="2"><label for="q67_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>68. Which is the greater fault:</p>
+                <h3>a. being indiscriminate</h3>
+                <h3>b. being critical</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q68_1" name="q68" value="1"><label for="q68_1">A</label>
+                    <input type="radio" id="q68_2" name="q68" value="2"><label for="q68_2">B</label>
+                </div>
+            </div>
+
+            <div class = "question">
+                <p>69. Do you prefer the</p>
+                <h3>a. planned event</h3>
+                <h3>b. unplanned event</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q69_1" name="q69" value="1"><label for="q69_1">A</label>
+                    <input type="radio" id="q69_2" name="q69" value="2"><label for="q69_2">B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>70. Do you tend to be more</p>
+                <h3>a. deliberate than spontaneous</h3>
+                <h3>b. spontaneous than deliberate</h3>
+                <div class="likert-scale">
+                    <input type="radio" id="q70_1" name="q70" value="1"><label for="q70_1">A</label>
+                    <input type="radio" id="q70_2" name="q70" value="2"><label for="q70_2">B</label>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+    <script src="Javascript/mbti.js"></script>
+</body>
+</html>

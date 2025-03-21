@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #7069C6, #ededef);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    font-family: 'Kavoon', sans-serif;
+    color: #333;
+}
+.logo {
+    background: linear-gradient(90deg, #441752, #8174A0);
+    text-align: center;
+    font-family: 'Kavoon', sans-serif;
+    font-size: 2.5rem; 
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px; 
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #B5A8D5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 30px; 
+    font-size: 2.5rem; 
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.question h3{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.likert-scale {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.likert-scale input[type="radio"] {
+    display: none;
+}
+
+.likert-scale label {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    flex: 1;
+}
+
+.likert-scale input[type="radio"]:checked + label {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.likert-scale label:hover {
+    background-color: #a1c4f5;
+    transform: scale(1.1);
+}
+
+button {
+    width: 150px;
+    height: 48px;
+    background: #7069C6;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Kavoon', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    
+   
+    display: block;
+    margin: 20px auto; 
+    text-align: center;
+}
+
+button:hover {
+    background-color: #463769;
+}

@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #7069C6, #ededef);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 30px; 
+    font-size: 2.5rem; 
+}
+
+
+.logo {
+    background: linear-gradient(90deg, #441752, #8174A0);
+    text-align: center;
+    font-family: 'Kavoon', sans-serif;
+    font-size: 2.5rem; 
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px; 
+}
+
+.container{
+    width: 640px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#441752;
+    border-radius: 5px;
+}
+
+.cards-header{
+    background-color: #463769;
+    border-radius: 10px 10px 0 0;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    width: auto;
+}
+.card{
+    overflow-y: auto;
+}
+
+.card-body{
+    padding: 0.8rem;
+    font-size: 1rem;
+    height: 450px;
+    overflow-y: auto;
+}
+.card-body .chat-box{
+    display: flex;
+    align-items: center;
+}
+
+.card-body .user{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.card-body .chat-bot p{
+    background-color: #B5A8D5;
+    border-radius: 10px;
+    padding: 0.8rem;
+    width:250px;
+    white-space: pre-wrap;
+}
+
+.card-body .user p{
+    background-color: #B5A8D5;
+    border-radius: 10px;
+    padding: 0.8rem;
+    width:250px;
+    white-space: pre-wrap;
+}
+
+.chat-bot, .user {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center; 
+}
+
+.chat-bot p, .user p {
+    background-color: #B5A8D5;
+    border-radius: 10px;
+    padding: 0.8rem;
+    width: 250px;
+    white-space: pre-wrap;
+    margin: 0; 
+}
+
+
+
+.chat .user-icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-right: 0.5rem; 
+    border: 2px solid #463769;
+}
+
+.user-icon .bxs-heart{
+    color: #441752;
+}
+
+.user-icon .bx-user{
+    color: #441752;
+}
+
+.card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+
+}
+
+.card-footer textarea{
+    resize: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    width: 100%;
+    display: flex;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #463769;
+    color: #fff;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.card-footer ::placeholder{
+    color: #fff;
+    font-size: 1rem;
+}
+
+.sending-icon{
+    position: absolute;
+    right: 30px;
+}
+
+.sending-icon .bxs-paper-plane{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+

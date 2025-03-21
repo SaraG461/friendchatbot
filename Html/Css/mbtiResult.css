@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #7069C6, #ededef);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    font-family:"Lato", sans-serif;
+    color: #333;
+}
+
+.logo {
+    background: linear-gradient(90deg, #441752, #8174A0);
+    text-align: center;
+    font-family: 'Kavoon', sans-serif;
+    font-size: 2.5rem; 
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px; 
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 30px; 
+    font-size: 2.5rem; 
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 500px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.mbti {
+    font-size: 1.8rem;
+    color: #441752;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+
+#startBtn{
+    width: 150px;
+    height: 48px;
+    background: #7069C6;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Kavoon', sans-serif;
+    color: #fff;
+    font-weight: 400;
+}
