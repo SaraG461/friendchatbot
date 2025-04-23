@@ -23,6 +23,6 @@
     document.querySelector(".description").textContent = descriptions[mbti] || "Description not found.";
 
     document.getElementById("startBtn").addEventListener("click", () => {
-        window.location.href = "chatbot.html";
+        window.location.href = "chatbot2.html";
     });
 

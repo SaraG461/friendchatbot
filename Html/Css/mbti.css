@@ -120,3 +120,35 @@ button {
 button:hover {
     background-color: #463769;
 }
+
+.goto-chatbot {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .goto-chatbot p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .goto-chatbot button {
+    background: #7069C6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .goto-chatbot button:hover {
+    background: #463769;
+  }
+  

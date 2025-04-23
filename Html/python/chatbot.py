@@ -5,11 +5,10 @@ from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 
 app = Flask(__name__)
-CORS(app) 
+CORS(app)
 
 
 with open(r"C:\Users\Sara\Documents\friendchatbot\Html\python\personality.json", "r", encoding="utf-8") as file:
-
     personality_data = json.load(file)
 
 
@@ -17,51 +16,61 @@ model = OllamaLLM(model="llama3.2")
 
 
 template = """
-You are an advanced AI that responds based on personality traits using Chain of Thought (CoT) reasoning.
-{personality}
-{reasoning}
-In this scenario, I would likely react this way.
-Response: {response}
-User Question: {question}
-"""
+You are an AI roleplaying a person with the {personality} personality type. 
+Use the reasoning provided to guide your natural response, like a human would respond in casual conversation. 
+You do not need to explain reasoning, just use it to shape the tone and intent.
 
+Reasoning: {reasoning}
+
+User: {question}
+AI: {response}
+"""
 prompt = ChatPromptTemplate.from_template(template)
 
+# Personality-based response logic
 def chatbot_response(user_question, personality_type):
-    # Check for casual or emotional responses
-    user_question = user_question.strip().lower()
-    if any(phrase in user_question for phrase in ["i'm fine", "i'm awesome", "i'm good", "i'm great", "i'm doing well", "i'm okay", "i'm happy", "i'm excited", "i'm thrilled"]):
-        return "Glad to hear you're doing well"
-    elif any(phrase in user_question for phrase in ["i'm sad", "i'm upset", "i'm angry", "i'm frustrated", "i'm not okay"]):
-        return "I'm sorry to hear that. Do you want to talk about it?"
+    clean_question = user_question.strip()
+    lower_question = clean_question.lower()
 
     
+    if any(phrase in lower_question for phrase in [
+        "i'm fine", "i'm awesome", "i'm good", "i'm great", "i'm doing well", 
+        "i'm okay", "i'm happy", "i'm excited", "i'm thrilled"
+    ]):
+        return "Glad to hear you're doing well!"
+    elif any(phrase in lower_question for phrase in [
+        "i'm sad", "i'm upset", "i'm angry", "i'm frustrated", "i'm not okay"
+    ]):
+        return "I'm sorry to hear that. Do you want to talk about it?"
+
+   
     for question, personalities in personality_data.items():
-        if user_question.strip().lower() == question.strip().lower():
+        if lower_question == question.strip().lower():
             if personality_type in personalities:
                 reasoning = personalities[personality_type]["Reasoning"]
                 response = personalities[personality_type]["Response"]
-                
+
                 filled_prompt = prompt.format(
                     personality=personality_type,
                     reasoning=reasoning,
                     response=response,
-                    question=user_question
+                    question=clean_question
                 )
 
-                # Send to Ollama
-                ai_reply = model.invoke(filled_prompt)
+                model.invoke(filled_prompt)  # Used for contextual influence, not the final return
                 return response
 
-    # Fallback if no match found
+   
     fallback_prompt = f"""
-    You are an advanced AI with the following personality traits: {personality_type}.
-    Respond to the following statement with a reply that reflects these traits:
-    "{user_question}"
+    You are a friendly and conversational AI who behaves like a person with the {personality_type} personality type. 
+    Your responses should be natural, emotionally intelligent, and reflective of the traits associated with {personality_type}.
+    Be personable but stay in character.
+
+    User: {clean_question}
+    AI:
     """
     ai_reply = model.invoke(fallback_prompt)
     return ai_reply
-
 
 
 @app.route("/chat", methods=["POST"])
@@ -69,8 +78,22 @@ def chat():
     data = request.get_json()
     user_input = data.get("message", "")
     personality = data.get("personality", "")
-    response = chatbot_response(user_input, personality)
-    return jsonify({"response": response}) 
+
+    # Personality-based response
+    personality_response = chatbot_response(user_input, personality)
+
+    # AI response without personality 
+    pure_prompt = f"""
+    Respond naturally and directly to the following statement:
+    "{user_input}"
+    """
+    pure_response = model.invoke(pure_prompt)
+
+    return jsonify({
+        "personality_response": personality_response,
+        "pure_response": pure_response
+    })
+
 
 if __name__ == "__main__":
     app.run(debug=True)

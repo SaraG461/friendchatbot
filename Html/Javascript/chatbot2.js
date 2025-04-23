@@ -2,8 +2,11 @@
 
 const inputEl = document.getElementById('userInput');
 const btnEl = document.querySelector('.submit-btn');
-const responseEl = document.getElementById('chatbotResponse');
 const personalityEl = document.getElementById('personality');
+
+// DOM elements for both responses
+const personalityResponse = document.getElementById("personalityResponse");
+const pureResponse = document.getElementById("pureResponse");
 
 btnEl.addEventListener('click', async () => {
     const userMessage = inputEl.value.trim();
@@ -14,7 +17,9 @@ btnEl.addEventListener('click', async () => {
         return;
     }
 
-    responseEl.innerHTML = `<strong>You:</strong> ${userMessage}<br><em>Chatbot is thinking...</em>`;
+    // Temporary loading text
+    personalityResponse.innerText = "Thinking...";
+    pureResponse.innerText = "Thinking...";
 
     try {
         const res = await fetch("http://127.0.0.1:5000/chat", {
@@ -29,11 +34,13 @@ btnEl.addEventListener('click', async () => {
         });
 
         const data = await res.json();
-        responseEl.innerHTML = `<strong>Chatbot:</strong> ${data.response}`;
+        personalityResponse.innerText = data.personality_response;
+        pureResponse.innerText = data.pure_response;
 
     } catch (error) {
         console.error("Error:", error);
-        responseEl.innerHTML = `<strong>Error:</strong> Failed to connect to chatbot server. Is Python running?`;
+        personalityResponse.innerText = "Error contacting server.";
+        pureResponse.innerText = "Error contacting server.";
     }
 
     inputEl.value = '';
