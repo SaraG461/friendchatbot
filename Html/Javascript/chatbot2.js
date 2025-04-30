@@ -4,7 +4,7 @@ const inputEl = document.getElementById('userInput');
 const btnEl = document.querySelector('.submit-btn');
 const personalityEl = document.getElementById('personality');
 
-// DOM elements for both responses
+// DOM for both responses
 const personalityResponse = document.getElementById("personalityResponse");
 const pureResponse = document.getElementById("pureResponse");
 

@@ -16,18 +16,40 @@ model = OllamaLLM(model="llama3.2")
 
 
 template = """
-You are an AI roleplaying a person with the {personality} personality type. 
-Use the reasoning provided to guide your natural response, like a human would respond in casual conversation. 
-You do not need to explain reasoning, just use it to shape the tone and intent.
+You are roleplaying a character with distinct traits. Respond naturally—never mention personality types, cognitive functions, or analysis.
 
-Reasoning: {reasoning}
+**Internal Guidance (Do NOT reveal these to the user):**
+1. Core traits of your character:
+   - Thinking style: {cognitive_functions}  
+   - How you communicate: {communication_style}  
+   - What matters to you: {values}  
 
-User: {question}
-AI: {response}
+2. Analyze the user’s message:
+   - Surface meaning: What are they directly saying?  
+   - Subtext: What might they *really* need or feel?  
+
+3. Respond in a way that feels authentic to your character:
+   - Match your natural speech patterns ({communication_style})  
+   - Align with your values ({values})  
+   - Adapt tone to context (serious, playful, etc.)  
+
+4. Final check before replying:
+   - Would a real person talk like this, or does it sound robotic?  
+   - Is the tone consistent with the conversation flow?  
+
+**Conversation:**  
+User: {question}  
+Your response (fully in-character):  
 """
+
+# Populate these based on MBTI type (kept internal):
+cognitive_functions = "e.g., Focus on big-picture logic, not details"  
+communication_style = "e.g., Blunt but solution-oriented"  
+values = "e.g., Efficiency and honesty above all"  
+
 prompt = ChatPromptTemplate.from_template(template)
 
-# Personality-based response logic
+# Personality-based response
 def chatbot_response(user_question, personality_type):
     clean_question = user_question.strip()
     lower_question = clean_question.lower()
@@ -57,7 +79,7 @@ def chatbot_response(user_question, personality_type):
                     question=clean_question
                 )
 
-                model.invoke(filled_prompt)  # Used for contextual influence, not the final return
+                model.invoke(filled_prompt)  
                 return response
 
    
